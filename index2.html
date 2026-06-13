@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        #result{
+            height: 100px;
+            width: 100%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">Result :-</div>
+    <div id="container">This is div</div>
+</body>
+
+<script>
+    let output = document.getElementById("result");
+    
+    let div = document.getElementById("container");
+    div.addEventListener("mouseover" , function(){
+    output.innerHTML = "Mouse Over!!";
+    });
+
+    let div1 = document.getElementById("container");
+    div1.addEventListener("mouseout" , function(){
+    output.innerHTML = "Mouse Out Now"
+    });
+
+</script>
+</html>
