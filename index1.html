@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        #result{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(192, 191, 191);
+            color: purple;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">Result :- </div>
+    <br>
+    <button id="btn">Clicked Me!!</button>
+    <br>
+    <br>
+    <button id = btn1>Double Click!!</button>
+</body>
+<script>
+      let output = document.getElementById("result");
+
+
+    let button = document.getElementById("btn")
+    button.addEventListener("click", function(){
+    button.style.color = "blue";
+     output.innerHTML = "Button click";
+     output.style.color = "#f0f";
+    });
+
+     let button1 = document.getElementById("btn1")
+    button1.addEventListener("click", function(){
+     output.innerHTML = "Double click";
+     button1.style.color ="green"
+     output.style.color = "red";
+    });
+
+</script>
+</html>
