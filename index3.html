@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        #result{
+            width: 100%;
+            height: 100px;
+            border: 2px solid black;
+            background-color: rgb(196, 188, 188);
+            color: red;
+            padding: 20px;
+            font-size: 20px;
+
+        }
+
+        #container{
+             width: 300px;
+            height: 30px;
+            border: 2px solid black;
+            background-color: rgb(205, 66, 66);
+            text-align: center;
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+ <!-- Output -->
+    <div id="result">Result :-</div>
+
+    <br><br>
+
+    <!-- Click -->
+
+    <!-- <button onclick="start()">Click Me!!</button> -->
+
+    <button id="btn">Click Me!!</button>
+
+    <br><br>
+     <button id="btn1">Double Clicked !!</button>
+<br><br>
+
+<!-- Mouse -->
+
+<div id="container">
+    This is Div
+</div>
+
+
+
+</body>
+    <script>
+
+        // OutPut **************
+        let output = document.getElementById("result");
+
+        // ********* Inline Js ***********
+
+        // function start() {
+
+        //   // console.log("Button Clicked!!");
+        //      alert ("Button Clicked !!");
+            
+        // }
+
+
+        // **********************************
+
+    //     let button = document.getElementById("btn");
+
+    //     // console.log(button);
+
+    //     button.addEventListener("click", function () {
+    //     //    alert("Button Clicked !!");
+    //    //     button.style.backgroundColor = "Blue";
+    //  //   button.style.color = "Red";   
+     
+     
+    //     });
+
+
+
+
+     let button = document.getElementById("btn");
+
+     button.addEventListener("click", function(){
+        output.innerHTML = "Button Clicked !!";
+        output.style.color = "blue";  
+     });
+        
+     // double Clicked **************
+
+     
+     let btn1 = document.getElementById("btn1");
+
+     btn1.addEventListener("dblclick", function(){
+         output.innerHTML = "Button Clicked Two Times !!";
+         output.style.color = "blue"; 
+     });
+
+    //  Mouse Over *************
+
+    let div = document.getElementById("container");
+
+    div.addEventListener("mouseover", function(){
+         output.innerHTML = "Mouse over !!";
+         output.style.color = "blue"; 
+    });
+
+    // Mouse Out *****************
+
+      let div1 = document.getElementById("container");
+
+    div1.addEventListener("mouseout", function(){
+         output.innerHTML = "Mouse Out Now !!";
+         output.style.color = "blue"; 
+    })
+
+    </script>
+
+</html>
